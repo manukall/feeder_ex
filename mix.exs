@@ -5,7 +5,8 @@ defmodule FeederEx.Mixfile do
     [app: :feeder_ex,
      version: "0.0.1",
      elixir: "~> 1.0",
-     deps: deps]
+     deps: deps,
+     package: package]
   end
 
   # Configuration for the OTP application
@@ -26,5 +27,13 @@ defmodule FeederEx.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:feeder, "~> 1.4.3"}]
+  end
+
+  defp package do
+    [contributors: ["Manuel Kallenbach"],
+     licenses: ["MIT"],
+     description: "RSS feed parser. Simple wrapper for feeder.",
+     links: %{"GitHub" => "https://github.com/manukall/feeder_ex",
+              "Feeder" => "https://github.com/michaelnisi/feeder"}]
   end
 end
