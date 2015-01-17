@@ -10,6 +10,10 @@ defmodule FeederEx do
       updated: nil
   end
 
+  defmodule Enclosure do
+    defstruct  url: nil, size: nil, type: nil
+  end
+
   def parse_file(filename) do
     :feeder.file filename, opts
   end

@@ -27,12 +27,12 @@ defmodule FeederEx.ParserExTest do
     assert feed.updated  == "the updated date"
   end
 
-  test "entry event" do
+  test "entry event without enclosure" do
     event_data = {
         :entry,
         "the author",
         "the duration",
-        "the enclosure",
+        :undefined,
         "the id",
         "the image",
         "the link",
@@ -47,7 +47,7 @@ defmodule FeederEx.ParserExTest do
 
     assert entry.author    == "the author"
     assert entry.duration  == "the duration"
-    assert entry.enclosure == "the enclosure"
+    assert entry.enclosure == nil
     assert entry.id        == "the id"
     assert entry.image     == "the image"
     assert entry.link      == "the link"
@@ -55,6 +55,27 @@ defmodule FeederEx.ParserExTest do
     assert entry.summary   == "the summary"
     assert entry.title     == "the title"
     assert entry.updated   == "the updated date"
+  end
+
+  test "entry event with enclosure" do
+    event_data = {
+        :entry,
+        "the author",
+        "the duration",
+        {:enclosure, "http://www.example.com/enclosure.mp3", "123456", "audio/mpeg"},
+        "the id",
+        "the image",
+        "the link",
+        "the subtitle",
+        "the summary",
+        "the title",
+        "the updated date"
+    }
+    {:feed, [entry]} =
+      FeederEx.Parser.event({:entry, event_data}, {:feed, []})
+
+    assert entry.enclosure == %FeederEx.Enclosure{url: "http://www.example.com/enclosure.mp3",
+                                                 size: "123456", type: "audio/mpeg"}
   end
 
 end

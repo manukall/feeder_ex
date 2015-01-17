@@ -45,3 +45,10 @@ iex> Enum.map feed.entries, fn(entry) -> entry.title end
 - summary
 - title
 - updated
+
+
+### FeederEx.Enclosure
+
+- url
+- size
+- type

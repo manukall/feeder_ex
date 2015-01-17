@@ -23,7 +23,7 @@ defmodule FeederEx.Parser do
     entry = %FeederEx.Entry{
                  author: undefined_to_nil(author),
                  duration: undefined_to_nil(duration),
-                 enclosure: undefined_to_nil(enclosure),
+                 enclosure: parse_enclosure(enclosure),
                  id: undefined_to_nil(id),
                  image: undefined_to_nil(image),
                  link: undefined_to_nil(link),
@@ -39,11 +39,16 @@ defmodule FeederEx.Parser do
     %{feed | entries: Enum.reverse(entries)}
   end
 
-  defp undefined_to_nil(value) do
-    case value do
-      :undefined -> nil
-      anything -> anything
-    end
+  defp undefined_to_nil(:undefined), do: nil
+  defp undefined_to_nil(value), do: value
+
+  defp parse_enclosure(:undefined), do: nil
+  defp parse_enclosure({:enclosure, url, size, type}) do
+    %FeederEx.Enclosure{
+                 url: undefined_to_nil(url),
+                 size: undefined_to_nil(size),
+                 type: undefined_to_nil(type)
+             }
   end
 
 end
