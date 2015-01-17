@@ -5,25 +5,25 @@ defmodule FeederExTest do
 
   test "parsing a file" do
     {:ok, feed, _} = FeederEx.parse_file(@sample_file)
-    assert feed.author == :undefined
-    assert feed.id == :undefined
-    assert feed.image == :undefined
+    assert feed.author == nil
+    assert feed.id == nil
+    assert feed.image == nil
     assert feed.link == "http://liftoff.msfc.nasa.gov/"
     assert feed.language == "en-us"
-    assert feed.subtitle == :undefined
+    assert feed.subtitle == nil
     assert feed.summary == "Liftoff to Space Exploration."
     assert feed.title == "Liftoff News"
     assert feed.updated == "Tue, 10 Jun 2003 04:00:00 GMT"
     assert length(feed.entries) == 4
 
     [entry | _] = feed.entries
-    assert entry.author == :undefined
-    assert entry.duration == :undefined
-    assert entry.enclosure == :undefined
+    assert entry.author == nil
+    assert entry.duration == nil
+    assert entry.enclosure == nil
     assert entry.id == "http://liftoff.msfc.nasa.gov/2003/06/03.html#item573"
-    assert entry.image == :undefined
+    assert entry.image == nil
     assert entry.link == "http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp"
-    assert entry.subtitle == :undefined
+    assert entry.subtitle == nil
     assert entry.summary == "How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia's <a href=\"http://howe.iki.rssi.ru/GCTC/gctc_e.htm\">Star City</a>."
     assert entry.title == "Star City"
     assert entry.updated == "Tue, 03 Jun 2003 09:39:21 GMT"
