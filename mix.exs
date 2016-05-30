@@ -13,7 +13,7 @@ defmodule FeederEx.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :feeder]]
   end
 
   # Dependencies can be Hex packages:
