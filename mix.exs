@@ -26,7 +26,7 @@ defmodule FeederEx.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:feeder, "~> 1.4.3"}]
+    [{:feeder, "~> 2.0.1"}]
   end
 
   defp package do
