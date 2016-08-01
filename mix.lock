@@ -1,1 +1,1 @@
-%{"feeder": {:hex, :feeder, "1.4.3"}}
+%{"feeder": {:hex, :feeder, "2.0.1", "f6d7d2468831f5406a7ec2969c8c51ec405697a4ffc319b25cb4ac56437546ba", [:make], []}}

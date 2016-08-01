@@ -3,7 +3,7 @@ defmodule FeederEx.Mixfile do
 
   def project do
     [app: :feeder_ex,
-     version: "0.0.3",
+     version: "0.0.4",
      elixir: "~> 1.0",
      deps: deps,
      package: package]
@@ -26,7 +26,7 @@ defmodule FeederEx.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:feeder, "~> 1.4.3"}]
+    [{:feeder, "~> 2.0"}]
   end
 
   defp package do
