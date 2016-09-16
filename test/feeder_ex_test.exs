@@ -30,6 +30,11 @@ defmodule FeederExTest do
 
   end
 
+  test "parse! returns just the parsed results on success" do
+    parsed_feed = FeederEx.parse!(File.read!(@sample_file))
+    assert parsed_feed.title == "Liftoff News"
+  end
+
   test "parsing a binary" do
     bin_feed = File.read! @sample_file
     {:ok, feed, _} = FeederEx.parse(bin_feed)
