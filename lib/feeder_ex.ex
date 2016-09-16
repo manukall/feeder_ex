@@ -23,7 +23,7 @@ defmodule FeederEx do
   end
 
   def parse!(feed_bin) do
-    {:ok, feed, _} = :feeder.stream feed_bin, opts
+    {:ok, feed, _} = parse(feed_bin)
     feed
   end
 
