@@ -22,6 +22,13 @@ defmodule FeederEx do
     :feeder.stream feed_bin, opts
   end
 
+  def parse!(feed_bin) do
+    case :feeder.stream feed_bin, opts do
+      {:ok, feed, _} -> feed
+      :error -> raise "feed could not be parsed"
+    end
+  end
+
   defp opts do
     [event_state:  {nil, []}, event_fun: &FeederEx.Parser.event/2]
   end
