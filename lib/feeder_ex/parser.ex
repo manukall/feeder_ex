@@ -35,6 +35,7 @@ defmodule FeederEx.Parser do
     {feed, [entry | entries]}
   end
 
+  def event(:endFeed, {nil, entries}), do: %FeederEx.Feed{entries: entries}
   def event(:endFeed, {feed, entries}) do
     %{feed | entries: Enum.reverse(entries)}
   end

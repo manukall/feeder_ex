@@ -30,14 +30,20 @@ defmodule FeederExTest do
 
   end
 
+  test "parsing a binary" do
+    bin_feed = File.read! @sample_file
+    {:ok, feed, _} = FeederEx.parse(bin_feed)
+    assert feed.title == "Liftoff News"
+  end
+
   test "parse! returns just the parsed results on success" do
     parsed_feed = FeederEx.parse!(File.read!(@sample_file))
     assert parsed_feed.title == "Liftoff News"
   end
 
-  test "parsing a binary" do
-    bin_feed = File.read! @sample_file
-    {:ok, feed, _} = FeederEx.parse(bin_feed)
-    assert feed.title == "Liftoff News"
+  test "parse! raises an error on failure" do
+    assert_raise MatchError, fn ->
+      FeederEx.parse!("<xml>")
+    end
   end
 end
