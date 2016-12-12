@@ -4,7 +4,8 @@ notifications:
     - mk@manukall.de
 elixir:
   - 1.2.6
-  - 1.3.2
+  - 1.3.4
 env: MIX_ENV=test
 otp_release:
   - 18.3
+  - 19.1
