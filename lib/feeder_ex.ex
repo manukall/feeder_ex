@@ -1,7 +1,7 @@
 defmodule FeederEx do
   defmodule Feed do
     defstruct author: nil, id: nil, image: nil, link: nil, language: nil,
-      subtitle: nil, summary: nil, title: nil, updated: nil, entries: []
+      subtitle: nil, summary: nil, title: nil, updated: nil, url: nil, entries: []
   end
 
   defmodule Entry do
