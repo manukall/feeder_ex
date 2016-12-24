@@ -31,7 +31,7 @@ defmodule FeederEx.Mixfile do
   end
 
   defp package do
-    [contributors: ["Manuel Kallenbach"],
+    [maintainers: ["Manuel Kallenbach"],
      licenses: ["MIT"],
      description: "RSS feed parser. Simple wrapper for feeder.",
      links: %{"GitHub" => "https://github.com/manukall/feeder_ex",
