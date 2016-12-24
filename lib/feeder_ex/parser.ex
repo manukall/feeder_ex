@@ -1,7 +1,7 @@
 defmodule FeederEx.Parser do
 
   def event({:feed,
-             {:feed, author, id, image, language, link, subtitle, summary, title, updated}},
+             {:feed, author, id, image, language, link, subtitle, summary, title, updated, url}},
             {_, entries}) do
     feed = %FeederEx.Feed{
                  author: undefined_to_nil(author),
@@ -12,7 +12,8 @@ defmodule FeederEx.Parser do
                  subtitle: undefined_to_nil(subtitle),
                  summary: undefined_to_nil(summary),
                  title: undefined_to_nil(title),
-                 updated: undefined_to_nil(updated)
+                 updated: undefined_to_nil(updated),
+                 url: undefined_to_nil(url)
              }
     {feed, entries}
   end

@@ -12,7 +12,8 @@ defmodule FeederEx.ParserExTest do
         "the subtitle",
         "the summary",
         "the title",
-        "the updated date"
+        "the updated date",
+        "the feed url"
     }
     {feed, :entries} = FeederEx.Parser.event({:feed, event_data}, {nil, :entries})
 
@@ -25,6 +26,7 @@ defmodule FeederEx.ParserExTest do
     assert feed.summary  == "the summary"
     assert feed.title    == "the title"
     assert feed.updated  == "the updated date"
+    assert feed.url      == "the feed url"
   end
 
   test "entry event without enclosure" do

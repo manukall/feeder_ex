@@ -14,6 +14,7 @@ defmodule FeederExTest do
     assert feed.summary == "Liftoff to Space Exploration."
     assert feed.title == "Liftoff News"
     assert feed.updated == "Tue, 10 Jun 2003 04:00:00 GMT"
+    assert feed.url == "http://liftoff.msfc.nasa.gov/feed/"
     assert length(feed.entries) == 4
 
     [entry | _] = feed.entries

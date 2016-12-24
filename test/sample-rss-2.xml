@@ -3,6 +3,7 @@
    <channel>
       <title>Liftoff News</title>
       <link>http://liftoff.msfc.nasa.gov/</link>
+      <atom:link>http://liftoff.msfc.nasa.gov/feed/</atom:link>
       <description>Liftoff to Space Exploration.</description>
       <language>en-us</language>
       <pubDate>Tue, 10 Jun 2003 04:00:00 GMT</pubDate>
