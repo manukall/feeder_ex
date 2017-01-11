@@ -5,13 +5,13 @@ defmodule FeederEx do
   end
 
   defmodule Entry do
-    defstruct  author: nil, duration: nil, enclosure: nil, id: nil,
+    defstruct author: nil, duration: nil, enclosure: nil, id: nil,
       image: nil, link: nil, subtitle: nil, summary: nil, title: nil,
       updated: nil
   end
 
   defmodule Enclosure do
-    defstruct  url: nil, size: nil, type: nil
+    defstruct url: nil, size: nil, type: nil
   end
 
   def parse_file(filename) do
@@ -28,7 +28,7 @@ defmodule FeederEx do
   end
 
   defp opts do
-    [event_state:  {nil, []}, event_fun: &FeederEx.Parser.event/2]
+    [event_state: {nil, []}, event_fun: &FeederEx.Parser.event/2]
   end
 
 end
