@@ -3,17 +3,17 @@ defmodule FeederEx.ParserExTest do
 
   test "feed event" do
     event_data = {
-        :feed,
-        "the author",
-        "the id",
-        "the image",
-        "the language",
-        "the link",
-        "the subtitle",
-        "the summary",
-        "the title",
-        "the updated date",
-        "the feed url"
+      :feed,
+      "the author",
+      "the id",
+      "the image",
+      "the language",
+      "the link",
+      "the subtitle",
+      "the summary",
+      "the title",
+      "the updated date",
+      "the feed url"
     }
     {feed, :entries} = FeederEx.Parser.event({:feed, event_data}, {nil, :entries})
 
@@ -31,17 +31,17 @@ defmodule FeederEx.ParserExTest do
 
   test "entry event without enclosure" do
     event_data = {
-        :entry,
-        "the author",
-        "the duration",
-        :undefined,
-        "the id",
-        "the image",
-        "the link",
-        "the subtitle",
-        "the summary",
-        "the title",
-        "the updated date"
+      :entry,
+      "the author",
+      "the duration",
+      :undefined,
+      "the id",
+      "the image",
+      "the link",
+      "the subtitle",
+      "the summary",
+      "the title",
+      "the updated date"
     }
     entries = [:entry_1, :entry_2]
     {:feed, [entry, :entry_1, :entry_2]} =
@@ -61,17 +61,17 @@ defmodule FeederEx.ParserExTest do
 
   test "entry event with enclosure" do
     event_data = {
-        :entry,
-        "the author",
-        "the duration",
-        {:enclosure, "http://www.example.com/enclosure.mp3", "123456", "audio/mpeg"},
-        "the id",
-        "the image",
-        "the link",
-        "the subtitle",
-        "the summary",
-        "the title",
-        "the updated date"
+      :entry,
+      "the author",
+      "the duration",
+      {:enclosure, "http://www.example.com/enclosure.mp3", "123456", "audio/mpeg"},
+      "the id",
+      "the image",
+      "the link",
+      "the subtitle",
+      "the summary",
+      "the title",
+      "the updated date"
     }
     {:feed, [entry]} =
       FeederEx.Parser.event({:entry, event_data}, {:feed, []})
