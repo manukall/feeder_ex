@@ -15,11 +15,11 @@ defmodule FeederEx do
   end
 
   def parse_file(filename) do
-    :feeder.file filename, opts
+    :feeder.file filename, opts()
   end
 
   def parse(feed_bin) do
-    :feeder.stream feed_bin, opts
+    :feeder.stream feed_bin, opts()
   end
 
   def parse!(feed_bin) do

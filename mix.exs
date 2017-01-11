@@ -5,8 +5,8 @@ defmodule FeederEx.Mixfile do
     [app: :feeder_ex,
      version: "1.0.0",
      elixir: "~> 1.0",
-     deps: deps,
-     package: package]
+     deps: deps(),
+     package: package()]
   end
 
   # Configuration for the OTP application
