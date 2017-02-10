@@ -19,10 +19,11 @@ defmodule FeederEx.Parser do
   end
 
   def event({:entry,
-            {:entry, author, duration, enclosure, id, image, link, subtitle, summary, title, updated}},
+            {:entry, author, categories, duration, enclosure, id, image, link, subtitle, summary, title, updated}},
             {feed, entries}) do
     entry = %FeederEx.Entry{
       author: undefined_to_nil(author),
+      categories: undefined_to_list(categories),
       duration: undefined_to_nil(duration),
       enclosure: parse_enclosure(enclosure),
       id: undefined_to_nil(id),
@@ -40,6 +41,9 @@ defmodule FeederEx.Parser do
   def event(:endFeed, {feed, entries}) do
     %{feed | entries: Enum.reverse(entries)}
   end
+
+  defp undefined_to_list(:undefined), do: []
+  defp undefined_to_list(value), do: value
 
   defp undefined_to_nil(:undefined), do: nil
   defp undefined_to_nil(value), do: value
