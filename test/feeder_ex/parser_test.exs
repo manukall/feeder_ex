@@ -33,6 +33,7 @@ defmodule FeederEx.ParserExTest do
     event_data = {
       :entry,
       "the author",
+      ["News"],
       "the duration",
       :undefined,
       "the id",
@@ -63,6 +64,7 @@ defmodule FeederEx.ParserExTest do
     event_data = {
       :entry,
       "the author",
+      ["News"],
       "the duration",
       {:enclosure, "http://www.example.com/enclosure.mp3", "123456", "audio/mpeg"},
       "the id",

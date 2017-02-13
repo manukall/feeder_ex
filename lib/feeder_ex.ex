@@ -5,7 +5,7 @@ defmodule FeederEx do
   end
 
   defmodule Entry do
-    defstruct author: nil, duration: nil, enclosure: nil, id: nil,
+    defstruct author: nil, categories: [], duration: nil, enclosure: nil, id: nil,
       image: nil, link: nil, subtitle: nil, summary: nil, title: nil,
       updated: nil
   end
