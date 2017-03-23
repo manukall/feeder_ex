@@ -26,7 +26,7 @@ defmodule FeederEx.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:feeder, git: "git://github.com/mojotech/feeder.git", sha: "db4e3e172fa7e2ee4e1f84ca2d30cafef5e34c56"},
+    [{:feeder, "~> 2.2"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
