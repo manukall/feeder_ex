@@ -14,12 +14,15 @@
       <webMaster>webmaster@example.com</webMaster>
       <item>
          <title>Star City</title>
+         <category><![CDATA[News]]></category>
+         <category><![CDATA[Current Events]]></category>
          <link>http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp</link>
          <description>How do Americans get ready to work with Russians aboard the International Space Station? They take a crash course in culture, language and protocol at Russia's &lt;a href="http://howe.iki.rssi.ru/GCTC/gctc_e.htm"&gt;Star City&lt;/a&gt;.</description>
          <pubDate>Tue, 03 Jun 2003 09:39:21 GMT</pubDate>
          <guid>http://liftoff.msfc.nasa.gov/2003/06/03.html#item573</guid>
       </item>
       <item>
+         <category><![CDATA[News]]></category>
          <description>Sky watchers in Europe, Asia, and parts of Alaska and Canada will experience a &lt;a href="http://science.nasa.gov/headlines/y2003/30may_solareclipse.htm"&gt;partial eclipse of the Sun&lt;/a&gt; on Saturday, May 31st.</description>
          <pubDate>Fri, 30 May 2003 11:06:42 GMT</pubDate>
          <guid>http://liftoff.msfc.nasa.gov/2003/05/30.html#item572</guid>
@@ -33,6 +36,7 @@
       </item>
       <item>
          <title>Astronauts' Dirty Laundry</title>
+         <category><![CDATA[News]]></category>
          <link>http://liftoff.msfc.nasa.gov/news/2003/news-laundry.asp</link>
          <description>Compared to earlier spacecraft, the International Space Station has many luxuries, but laundry facilities are not one of them.  Instead, astronauts have other options.</description>
          <pubDate>Tue, 20 May 2003 08:56:02 GMT</pubDate>

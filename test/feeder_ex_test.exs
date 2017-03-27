@@ -21,6 +21,7 @@ defmodule FeederExTest do
     assert entry.author == nil
     assert entry.duration == nil
     assert entry.enclosure == nil
+    assert entry.categories == ["Current Events", "News"]
     assert entry.id == "http://liftoff.msfc.nasa.gov/2003/06/03.html#item573"
     assert entry.image == nil
     assert entry.link == "http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp"

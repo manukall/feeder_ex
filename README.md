@@ -37,6 +37,7 @@ iex> Enum.map feed.entries, fn(entry) -> entry.title end
 ### FeederEx.Entry
 
 - author
+- categories
 - duration
 - enclosure
 - id

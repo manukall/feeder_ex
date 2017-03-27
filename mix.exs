@@ -26,7 +26,7 @@ defmodule FeederEx.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:feeder, "~> 2.1"},
+    [{:feeder, "~> 2.2"},
      {:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
