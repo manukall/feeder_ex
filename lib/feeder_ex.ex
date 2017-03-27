@@ -27,6 +27,11 @@ defmodule FeederEx do
     feed
   end
 
+  def parse!(feed_bin) do
+    {:ok, feed, _} = parse(feed_bin)
+    feed
+  end
+
   defp opts do
     [event_state: {nil, []}, event_fun: &FeederEx.Parser.event/2]
   end
