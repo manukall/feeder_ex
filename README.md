@@ -8,7 +8,7 @@ Simple wrapper for https://github.com/michaelnisi/feeder
 
 ```
 iex> HTTPoison.start
-iex> {:ok, %HTTPoison.Response{body: body}} = HTTPoison.get("http://www.rssboard.org/files/sample-rss-2.xml")
+iex> {:ok, %HTTPoison.Response{body: body}} = HTTPoison.get("https://www.rssboard.org/files/sample-rss-2.xml")
 iex> {:ok, feed, _} = FeederEx.parse(body)
 ...
 iex> feed.title
